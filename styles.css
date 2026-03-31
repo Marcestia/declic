@@ -1535,21 +1535,23 @@ img {
 }
 
 .service-hero__visual--signature {
-  min-height: clamp(30rem, 72svh, 46rem);
+  min-height: clamp(32rem, 74svh, 48rem);
+  overflow: visible;
 }
 
 .signature-machines {
   position: absolute;
-  inset: 0;
+  inset: auto -1rem -0.6rem -0.5rem;
   display: flex;
   align-items: flex-end;
-  justify-content: center;
-  gap: clamp(0.5rem, 2vw, 1.8rem);
-  padding-bottom: 0.6rem;
+  justify-content: flex-end;
+  gap: 0;
+  padding-bottom: 0;
 }
 
 .signature-machines__item {
   position: relative;
+  flex: 0 0 auto;
   display: block;
   width: auto;
   height: auto;
@@ -1559,17 +1561,23 @@ img {
 }
 
 .signature-machines__item--roll {
-  width: min(30%, 14rem);
-  transform: translateY(-1rem);
+  width: min(34%, 18rem);
+  margin-right: -1rem;
+  transform: translateY(-0.65rem);
+  z-index: 1;
 }
 
 .signature-machines__item--bike {
-  width: min(42%, 22rem);
+  width: min(56%, 31rem);
+  margin-right: -1.4rem;
+  transform: translateY(0.15rem);
+  z-index: 2;
 }
 
 .signature-machines__item--supra {
-  width: min(22%, 10rem);
-  transform: translateY(-0.4rem);
+  width: min(24%, 11.75rem);
+  transform: translateY(-0.35rem);
+  z-index: 3;
 }
 
 .service-pricing {
@@ -2235,18 +2243,21 @@ img {
 
   .signature-machines {
     justify-content: center;
+    inset: auto 0 -0.5rem 0;
   }
 
   .signature-machines__item--roll {
-    width: min(28%, 11rem);
+    width: min(31%, 13rem);
+    margin-right: -0.7rem;
   }
 
   .signature-machines__item--bike {
-    width: min(42%, 18rem);
+    width: min(52%, 23rem);
+    margin-right: -0.9rem;
   }
 
   .signature-machines__item--supra {
-    width: min(22%, 8rem);
+    width: min(22%, 9.25rem);
   }
 
   .service-suite__grid {
@@ -2346,20 +2357,22 @@ img {
   }
 
   .service-hero__visual--signature {
-    min-height: 22rem;
+    min-height: 24rem;
   }
 
   .signature-machines__item--roll {
-    width: min(30%, 8.8rem);
-    transform: translateY(-0.4rem);
+    width: min(31%, 10.6rem);
+    margin-right: -0.5rem;
+    transform: translateY(-0.25rem);
   }
 
   .signature-machines__item--bike {
-    width: min(44%, 15rem);
+    width: min(51%, 17.5rem);
+    margin-right: -0.65rem;
   }
 
   .signature-machines__item--supra {
-    width: min(24%, 6.6rem);
+    width: min(24%, 7.8rem);
   }
 }
 
@@ -2584,7 +2597,7 @@ img {
   }
 
   .signature-machines {
-    gap: 0.35rem;
+    gap: 0;
   }
 
   .service-hero__visual {
@@ -2593,7 +2606,7 @@ img {
   }
 
   .service-hero__visual--signature {
-    min-height: 15.5rem;
+    min-height: 17rem;
   }
 
   .service-hero__machine {
@@ -2610,15 +2623,17 @@ img {
   }
 
   .signature-machines__item--roll {
-    width: min(30%, 7.6rem);
+    width: min(33%, 8.9rem);
+    margin-right: -0.4rem;
   }
 
   .signature-machines__item--bike {
-    width: min(44%, 12.6rem);
+    width: min(52%, 14.2rem);
+    margin-right: -0.45rem;
   }
 
   .signature-machines__item--supra {
-    width: min(23%, 5.6rem);
+    width: min(23%, 6.9rem);
   }
 }
 
