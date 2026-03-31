@@ -2367,6 +2367,10 @@ img {
     --container: min(100vw - 1.2rem, 100rem);
   }
 
+  html {
+    scroll-padding-top: 5.8rem;
+  }
+
   .brand__logo {
     width: 10.75rem;
   }
@@ -2375,14 +2379,75 @@ img {
     display: none;
   }
 
-  .hero__athlete img {
-    right: -0.5rem;
-    height: 100%;
-    opacity: 0.82;
+  .hero {
+    min-height: auto;
+    padding-top: 6.2rem;
+    padding-bottom: 2.2rem;
+  }
+
+  .hero__inner {
+    display: block;
+    min-height: 0;
+  }
+
+  .hero__content {
+    position: relative;
+    z-index: 3;
+    max-width: none;
+    padding-right: min(30vw, 6.8rem);
+  }
+
+  .hero h1 {
+    margin-top: 0.7rem;
+    font-size: clamp(3.85rem, 14vw, 5.2rem);
+    line-height: 0.86;
+    letter-spacing: 0.03em;
+  }
+
+  .hero__lead {
+    max-width: 17.5rem;
+    font-size: 0.98rem;
+    letter-spacing: 0.06em;
+  }
+
+  .hero__impactline {
+    max-width: 16.5rem;
+    font-size: 0.78rem;
+    letter-spacing: 0.16em;
   }
 
   .hero__visual {
-    min-height: 24rem;
+    position: absolute;
+    right: -0.3rem;
+    bottom: 0;
+    z-index: 2;
+    width: min(48vw, 11.8rem);
+    min-height: 17rem;
+    margin-top: 0;
+    pointer-events: none;
+  }
+
+  .hero__athlete::before {
+    inset: 0;
+    background:
+      linear-gradient(90deg, rgba(5, 5, 5, 0.02) 0%, rgba(5, 5, 5, 0.06) 100%),
+      radial-gradient(circle at 72% 24%, rgba(255, 166, 92, 0.14), transparent 22%),
+      radial-gradient(circle at 64% 56%, rgba(255, 96, 0, 0.08), transparent 24%);
+  }
+
+  .hero__athlete::after {
+    right: 0;
+    bottom: 12%;
+    width: 8rem;
+    height: 4rem;
+  }
+
+  .hero__athlete img {
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: auto;
+    opacity: 0.72;
   }
 
   .service-hero__ghost {
@@ -2435,6 +2500,10 @@ img {
     flex-direction: column;
   }
 
+  .impact-stat__text {
+    max-width: none;
+  }
+
   .service-card {
     min-height: 0;
     grid-template-rows: minmax(14rem, 15rem) 1fr;
@@ -2454,6 +2523,12 @@ img {
     right: 1rem;
   }
 
+  .service-card__meta {
+    align-items: start;
+    flex-direction: column;
+    gap: 0.4rem;
+  }
+
   .service-card p {
     min-height: 0;
   }
@@ -2462,8 +2537,43 @@ img {
     grid-template-columns: 1fr;
   }
 
+  .service-hero {
+    min-height: auto;
+    padding-top: 6.2rem;
+    padding-bottom: 2.3rem;
+  }
+
   .service-hero__title {
-    font-size: clamp(3.4rem, 16vw, 5rem);
+    font-size: clamp(3.45rem, 14vw, 4.9rem);
+    line-height: 0.88;
+  }
+
+  .service-hero__subtitle {
+    font-size: 1.18rem;
+  }
+
+  .service-hero__description {
+    font-size: 0.98rem;
+    line-height: 1.45;
+  }
+
+  .service-hero__highlights {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.75rem;
+    margin-top: 1rem;
+  }
+
+  .service-highlight {
+    padding: 0.85rem 0.9rem;
+  }
+
+  .service-highlight__label {
+    font-size: 0.72rem;
+  }
+
+  .service-highlight__value {
+    font-size: clamp(1.3rem, 6.3vw, 2.1rem);
+    line-height: 0.94;
   }
 
   .pricing-card,
@@ -2476,16 +2586,63 @@ img {
     gap: 0.35rem;
   }
 
+  .service-hero__visual {
+    min-height: 17rem;
+    margin-top: 0.5rem;
+  }
+
+  .service-hero__visual--signature {
+    min-height: 15.5rem;
+  }
+
+  .service-hero__machine {
+    width: min(100%, 18rem);
+  }
+
+  .service-hero__machine--bike {
+    width: min(100%, 19rem);
+  }
+
+  .service-hero__machine--supra {
+    width: min(100%, 11rem);
+    right: auto;
+  }
+
   .signature-machines__item--roll {
-    width: 31%;
+    width: min(30%, 7.6rem);
   }
 
   .signature-machines__item--bike {
-    width: 46%;
+    width: min(44%, 12.6rem);
   }
 
   .signature-machines__item--supra {
-    width: 23%;
+    width: min(23%, 5.6rem);
+  }
+}
+
+@media (max-width: 420px) {
+  .hero__content {
+    padding-right: min(28vw, 5.8rem);
+  }
+
+  .hero h1 {
+    font-size: clamp(3.45rem, 13.2vw, 4.7rem);
+  }
+
+  .hero__lead {
+    max-width: 15.5rem;
+  }
+
+  .hero__impactline {
+    max-width: 15rem;
+    font-size: 0.74rem;
+    letter-spacing: 0.14em;
+  }
+
+  .hero__visual {
+    width: min(44vw, 10.5rem);
+    min-height: 15.5rem;
   }
 }
 
