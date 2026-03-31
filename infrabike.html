@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
+  <meta
+    name="description"
+    content="InfraBike chez DÉCLIC Sculpt Studio : cardio infrarouge, perte de centimètres, cartes de séances, abonnements et bienfaits."
+  >
+  <title>InfraBike | DÉCLIC Sculpt Studio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700;800&family=Oswald:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  >
+  <link rel="stylesheet" href="styles.css?v=29">
+</head>
+<body class="service-detail service-detail--infrabike">
+  <canvas id="embers-canvas" aria-hidden="true"></canvas>
+
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a class="brand" href="index.html#accueil" aria-label="Retour à l'accueil">
+        <img
+          class="brand__logo"
+          src="logo-site.png?v=2"
+          alt="DÉCLIC Sculpt Studio"
+          width="1050"
+          height="323"
+        >
+        <span class="sr-only">DÉCLIC Sculpt Studio</span>
+      </a>
+
+      <nav class="site-nav" aria-label="Navigation principale">
+        <a href="index.html#accueil">Accueil</a>
+        <a href="#tarifs">Technologies</a>
+        <a href="#bienfaits">Avantages</a>
+        <a href="index.html#contact">Contact</a>
+      </nav>
+
+      <a
+        class="button button--nav"
+        href="https://www.planity.com/declic-sculpt-studio-33750-beychac-et-caillau"
+        target="_blank"
+        rel="noreferrer"
+      >
+        <span>Réserve ta séance</span>
+      </a>
+    </div>
+  </header>
+
+  <main>
+    <section class="service-hero service-hero--bike" id="accueil">
+      <div class="service-hero__media" aria-hidden="true"></div>
+
+      <div class="service-hero__inner">
+        <div class="service-hero__content reveal">
+          <p class="section-tag">Technologie signature</p>
+          <h1 class="service-hero__title">INFRABIKE</h1>
+          <p class="service-hero__subtitle">Cardio & Perte de Centimètres</p>
+          <p class="service-hero__description">
+            Une séance cardio infrarouge à haute intensité pour brûler, drainer et accélérer la
+            perte de centimètres avec un effet sauna + effort ciblé.
+          </p>
+
+          <div class="service-hero__highlights">
+            <div class="service-highlight">
+              <span class="service-highlight__label">Séance</span>
+              <strong class="service-highlight__value">45€</strong>
+            </div>
+            <div class="service-highlight service-highlight--accent">
+              <span class="service-highlight__label">Formule conseillée</span>
+              <strong class="service-highlight__value">2 séances / semaine</strong>
+            </div>
+          </div>
+
+          <div class="hero__actions">
+            <a
+              class="button button--primary"
+              href="https://www.planity.com/declic-sculpt-studio-33750-beychac-et-caillau"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <span>Réserve ta séance InfraBike</span>
+            </a>
+            <a class="button button--ghost service-hero__ghost" href="#tarifs">
+              <span>Voir les tarifs</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="service-hero__visual reveal" aria-hidden="true" style="--delay: 0.08s;">
+          <div class="service-hero__visual-glow"></div>
+          <img
+            class="service-hero__machine service-hero__machine--bike"
+            src="machine-bike-processed.png"
+            alt="Machine InfraBike"
+            width="1200"
+            height="1200"
+          >
+        </div>
+      </div>
+    </section>
+
+    <section class="section service-pricing" id="tarifs">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="section-tag">Tarifs InfraBike</p>
+          <h2 class="section-title">Cartes et abonnements</h2>
+          <p class="section-intro">
+            Pour celles et ceux qui veulent un travail cardio infrarouge régulier, calibré et plus
+            rentable à la séance.
+          </p>
+        </div>
+
+        <div class="pricing-grid pricing-grid--packs">
+          <article class="pricing-card reveal" style="--delay: 0.04s;">
+            <span class="pricing-card__eyebrow">Séance</span>
+            <h3>1 séance</h3>
+            <p class="pricing-card__price">45€</p>
+            <p class="pricing-card__caption">Format découverte ou séance ciblée.</p>
+          </article>
+
+          <article class="pricing-card reveal" style="--delay: 0.1s;">
+            <span class="pricing-card__eyebrow">Carte</span>
+            <h3>5 séances</h3>
+            <p class="pricing-card__price">210€</p>
+            <p class="pricing-card__caption">42€ / séance</p>
+          </article>
+
+          <article class="pricing-card pricing-card--featured reveal" style="--delay: 0.16s;">
+            <span class="pricing-card__badge">La plus populaire</span>
+            <span class="pricing-card__eyebrow">Carte</span>
+            <h3>10 séances</h3>
+            <p class="pricing-card__price">400€</p>
+            <p class="pricing-card__caption">40€ / séance</p>
+          </article>
+        </div>
+
+        <div class="pricing-plan-grid">
+          <article class="plan-card reveal" style="--delay: 0.04s;">
+            <p class="plan-card__kicker">Abonnement</p>
+            <h3>Engagement 3 mois</h3>
+            <div class="plan-card__rows">
+              <div class="plan-card__row">
+                <span>1 séance / semaine</span>
+                <strong>148€ / mois</strong>
+                <small>~37€ / séance</small>
+              </div>
+              <div class="plan-card__row">
+                <span>2 séances / semaine</span>
+                <strong>288€ / mois</strong>
+                <small>~36€ / séance</small>
+              </div>
+            </div>
+          </article>
+
+          <article class="plan-card reveal" style="--delay: 0.1s;">
+            <p class="plan-card__kicker">Abonnement</p>
+            <h3>Engagement 6 mois</h3>
+            <div class="plan-card__rows">
+              <div class="plan-card__row">
+                <span>1 séance / semaine</span>
+                <strong>140€ / mois</strong>
+                <small>~35€ / séance</small>
+              </div>
+              <div class="plan-card__row">
+                <span>2 séances / semaine</span>
+                <strong>256€ / mois</strong>
+                <small>~32€ / séance</small>
+              </div>
+            </div>
+          </article>
+
+          <article class="plan-card plan-card--best reveal" style="--delay: 0.16s;">
+            <p class="plan-card__kicker">Abonnement</p>
+            <h3>Engagement 12 mois</h3>
+            <div class="plan-card__rows">
+              <div class="plan-card__row">
+                <span>1 séance / semaine</span>
+                <strong>120€ / mois</strong>
+                <small>~30€ / séance</small>
+              </div>
+              <div class="plan-card__row">
+                <span>2 séances / semaine</span>
+                <strong>224€ / mois</strong>
+                <small>~28€ / séance</small>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section service-benefits" id="bienfaits">
+      <div class="container">
+        <div class="section-head section-head--center reveal">
+          <p class="section-tag">Les bienfaits de l'InfraBike</p>
+          <h2 class="section-title">Cardio infrarouge. Silhouette qui se resserre.</h2>
+          <p class="section-intro">
+            Une combinaison sauna + cardio conçue pour activer la combustion, le drainage et
+            l’endurance avec des résultats visibles rapidement.
+          </p>
+        </div>
+
+        <div class="benefits-grid">
+          <article class="benefit-card reveal" style="--delay: 0.03s;">
+            <span class="benefit-card__icon" aria-hidden="true">✦</span>
+            <p>Brûle intensément les calories grâce à l’infrarouge</p>
+          </article>
+          <article class="benefit-card reveal" style="--delay: 0.06s;">
+            <span class="benefit-card__icon" aria-hidden="true">✦</span>
+            <p>Affine la silhouette et accélère la perte de centimètres</p>
+          </article>
+          <article class="benefit-card reveal" style="--delay: 0.09s;">
+            <span class="benefit-card__icon" aria-hidden="true">✦</span>
+            <p>Stimule la circulation et active le drainage</p>
+          </article>
+          <article class="benefit-card reveal" style="--delay: 0.12s;">
+            <span class="benefit-card__icon" aria-hidden="true">✦</span>
+            <p>Détoxifie l’organisme et réduit la rétention d’eau</p>
+          </article>
+          <article class="benefit-card reveal" style="--delay: 0.15s;">
+            <span class="benefit-card__icon" aria-hidden="true">✦</span>
+            <p>Améliore l’endurance et la récupération</p>
+          </article>
+          <article class="benefit-card reveal" style="--delay: 0.18s;">
+            <span class="benefit-card__icon" aria-hidden="true">✦</span>
+            <p>Effet sauna + cardio pour des résultats visibles rapidement</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section service-suite" aria-labelledby="suite-title">
+      <div class="container">
+        <div class="section-head section-head--center reveal">
+          <p class="section-tag">Protocoles complémentaires</p>
+          <h2 class="section-title" id="suite-title">Accélérez le protocole</h2>
+          <p class="section-intro">
+            Après le cardio infrarouge, vous pouvez drainer davantage, densifier la silhouette ou
+            basculer sur le protocole complet du studio.
+          </p>
+        </div>
+
+        <div class="service-suite__grid">
+          <a class="service-mini-card reveal" href="infraroll.html" style="--delay: 0.03s;">
+            <span class="service-mini-card__kicker">Drainage & amincissement</span>
+            <h3>InfraRoll</h3>
+            <p>Réduit la cellulite, relance la circulation et resserre visiblement la silhouette.</p>
+            <span class="service-mini-card__status">Voir le protocole</span>
+          </a>
+
+          <a class="service-mini-card reveal" href="suprasculpt.html" style="--delay: 0.07s;">
+            <span class="service-mini-card__kicker">Tonification musculaire</span>
+            <h3>SupraSculpt</h3>
+            <p>Galbe, raffermit et densifie la silhouette avec une stimulation musculaire intense.</p>
+            <span class="service-mini-card__status">Voir le protocole</span>
+          </a>
+
+          <a class="service-mini-card reveal" href="programme-signature.html" style="--delay: 0.11s;">
+            <span class="service-mini-card__kicker">Combinaison 3 technologies</span>
+            <h3>Programme Signature</h3>
+            <p>Le protocole complet du studio pour attaquer drainage, combustion et définition.</p>
+            <span class="service-mini-card__status">Voir le protocole</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-final">
+      <div class="cta-panel reveal">
+        <p class="section-tag">Passer à l'action</p>
+        <h2>Réservez votre protocole InfraBike</h2>
+        <p>
+          Entrez dans une routine cardio infrarouge pensée pour brûler plus, drainer plus et
+          accélérer la perte de centimètres.
+        </p>
+        <a
+          class="button button--primary"
+          href="https://www.planity.com/declic-sculpt-studio-33750-beychac-et-caillau"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <span>Réserve ta séance</span>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="site-footer__grid">
+      <div class="footer-block">
+        <img class="footer-brand" src="logo-site.png?v=2" alt="DÉCLIC Sculpt Studio" width="1050" height="323">
+        <p class="footer-copy">
+          Studio premium de transformation corporelle par chaleur infrarouge et stimulation ciblée.
+        </p>
+      </div>
+      <div class="footer-block">
+        <h3>Contact</h3>
+        <a href="tel:+33123456789">01 23 45 67 89</a>
+        <a href="mailto:contact@declicsculptstudio.fr">contact@declicsculptstudio.fr</a>
+        <p>26 Impasse de la Joncasse<br>33750 Beychac-et-Caillau</p>
+      </div>
+      <div class="footer-block">
+        <h3>Instagram & Accès</h3>
+        <div class="socials">
+          <a class="social-link" href="https://www.instagram.com/declicsculptstudio/" target="_blank" rel="noreferrer" aria-label="Instagram DÉCLIC Sculpt Studio">
+            <span class="social-link__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" role="presentation">
+                <rect x="3.25" y="3.25" width="17.5" height="17.5" rx="5"></rect>
+                <circle cx="12" cy="12" r="4.1"></circle>
+                <circle cx="17.35" cy="6.7" r="1.1" class="fill-dot"></circle>
+              </svg>
+            </span>
+            <span class="social-link__label">@declicsculptstudio</span>
+          </a>
+          <a class="social-link" href="https://www.google.com/maps/search/?api=1&query=26%20Impasse%20de%20la%20Joncasse%2C%2033750%20Beychac-et-Caillau" target="_blank" rel="noreferrer" aria-label="Ouvrir l'adresse dans Google Maps">
+            <span class="social-link__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" role="presentation">
+                <path d="M12 21s6-5.8 6-11a6 6 0 1 0-12 0c0 5.2 6 11 6 11Z"></path>
+                <circle cx="12" cy="10" r="2.4"></circle>
+              </svg>
+            </span>
+            <span class="social-link__label">Google Maps</span>
+          </a>
+          <a class="social-link" href="https://waze.com/ul?q=26%20Impasse%20de%20la%20Joncasse%2C%2033750%20Beychac-et-Caillau&navigate=yes" target="_blank" rel="noreferrer" aria-label="Ouvrir l'adresse dans Waze">
+            <span class="social-link__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" role="presentation">
+                <path d="M18.4 13.4a6.4 6.4 0 0 0 .3-2c0-3.8-2.9-6.5-7.1-6.5-4.6 0-7.9 3.1-7.9 7.4 0 2.1.8 4 2.2 5.2h1.8a2.2 2.2 0 0 0 4.2 0h2a2.2 2.2 0 0 0 4.2 0h.2c1.2 0 2.2-.9 2.2-2.1 0-1.1-.9-2-2-2h-.1Z"></path>
+                <circle cx="8.6" cy="17.6" r="1.05" class="fill-dot"></circle>
+                <circle cx="15.7" cy="17.6" r="1.05" class="fill-dot"></circle>
+                <circle cx="9.4" cy="11.1" r="1" class="fill-dot"></circle>
+                <circle cx="14" cy="11.1" r="1" class="fill-dot"></circle>
+              </svg>
+            </span>
+            <span class="social-link__label">Waze</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js?v=8"></script>
+</body>
+</html>
