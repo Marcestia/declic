@@ -2286,6 +2286,25 @@ img {
     min-height: 28rem;
   }
 
+  .service-hero--signature .service-hero__inner {
+    grid-template-columns: 1fr;
+    gap: 1.4rem;
+  }
+
+  .service-hero--signature .service-hero__content {
+    max-width: none;
+  }
+
+  .service-hero--signature .service-hero__description {
+    max-width: 34rem;
+  }
+
+  .service-hero--signature .service-hero__visual {
+    width: 100%;
+    max-width: 40rem;
+    margin-inline: auto;
+  }
+
   .service-hero__machine {
     position: relative;
     right: auto;
@@ -2604,13 +2623,27 @@ img {
     line-height: 0.88;
   }
 
+  .service-hero--signature .service-hero__title {
+    font-size: clamp(3.15rem, 13.4vw, 4.45rem);
+  }
+
   .service-hero__subtitle {
     font-size: 1.18rem;
+  }
+
+  .service-hero--signature .service-hero__subtitle {
+    max-width: none;
+    line-height: 1.2;
   }
 
   .service-hero__description {
     font-size: 0.98rem;
     line-height: 1.45;
+  }
+
+  .service-hero--signature .service-hero__description {
+    max-width: none;
+    font-size: 1rem;
   }
 
   .service-hero__highlights {
@@ -2647,6 +2680,11 @@ img {
     min-height: 18rem;
   }
 
+  .service-hero--signature .service-hero__visual--signature {
+    min-height: 19.5rem;
+    margin-top: 0.9rem;
+  }
+
   .service-hero__machine {
     width: min(100%, 18rem);
   }
@@ -2664,6 +2702,10 @@ img {
     inset: 0;
     max-width: 24rem;
     margin-inline: auto;
+  }
+
+  .service-hero--signature .signature-machines {
+    max-width: 22rem;
   }
 
   .signature-machines::before {
@@ -2712,6 +2754,32 @@ img {
 
   .hero__lead {
     max-width: 15.5rem;
+  }
+
+  .service-hero--signature .service-hero__highlights {
+    grid-template-columns: 1fr;
+  }
+
+  .service-hero--signature .service-hero__visual--signature {
+    min-height: 18.5rem;
+  }
+
+  .service-hero--signature .signature-machines {
+    max-width: 20rem;
+  }
+
+  .service-hero--signature .signature-machine--roll {
+    width: min(33%, 7.8rem);
+  }
+
+  .service-hero--signature .signature-machine--bike {
+    left: 22%;
+    width: min(56%, 13rem);
+  }
+
+  .service-hero--signature .signature-machine--supra {
+    right: 3%;
+    width: min(18%, 5.7rem);
   }
 
   .hero__impactline {
