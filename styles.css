@@ -1529,8 +1529,9 @@ img {
 }
 
 .service-hero__machine--supra {
-  width: min(100%, 25rem);
-  right: 5%;
+  width: min(100%, 32rem);
+  right: 1%;
+  bottom: -1.4rem;
 }
 
 .service-hero__visual--signature {
@@ -2604,7 +2605,7 @@ img {
   }
 
   .service-hero__machine--supra {
-    width: min(100%, 11rem);
+    width: min(100%, 15rem);
     right: auto;
   }
 
