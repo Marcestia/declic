@@ -1,20 +1,20 @@
 :root {
-  --bg: #040302;
-  --bg-alt: #0d0805;
-  --panel: #120c08;
-  --panel-strong: #1b120b;
-  --text: #f8ecd9;
-  --muted: #c7b79f;
-  --line: rgba(231, 196, 138, 0.14);
-  --accent: #d7a04d;
-  --accent-rgb: 215, 160, 77;
-  --accent-strong: #f0d39d;
-  --accent-soft: rgba(215, 160, 77, 0.16);
+  --bg: #020101;
+  --bg-alt: #090503;
+  --panel: #0e0905;
+  --panel-strong: #170d07;
+  --text: #fdf2e1;
+  --muted: #cdb99a;
+  --line: rgba(232, 199, 145, 0.14);
+  --accent: #e0b169;
+  --accent-rgb: 224, 177, 105;
+  --accent-strong: #fff0cd;
+  --accent-soft: rgba(224, 177, 105, 0.16);
   --fire: #ff7a1a;
   --fire-rgb: 255, 122, 26;
   --fire-strong: #ff4d00;
   --fire-soft: rgba(255, 122, 26, 0.16);
-  --glow: 0 0 24px rgba(215, 160, 77, 0.24), 0 0 56px rgba(255, 122, 26, 0.18);
+  --glow: 0 0 22px rgba(224, 177, 105, 0.28), 0 0 58px rgba(255, 122, 26, 0.16);
   --container: min(1180px, calc(100vw - 2rem));
   --section-space: clamp(4.5rem, 8vw, 8rem);
   --font-display: "Bebas Neue", sans-serif;
@@ -42,10 +42,10 @@ body {
   font-family: var(--font-body);
   color: var(--text);
   background:
-    radial-gradient(circle at 18% 18%, rgba(var(--accent-rgb), 0.14), transparent 24%),
-    radial-gradient(circle at 82% 12%, rgba(var(--fire-rgb), 0.18), transparent 22%),
-    radial-gradient(circle at 56% 74%, rgba(var(--accent-rgb), 0.08), transparent 28%),
-    linear-gradient(180deg, #030201 0%, #090603 38%, #040302 100%);
+    radial-gradient(circle at 18% 18%, rgba(var(--accent-rgb), 0.08), transparent 20%),
+    radial-gradient(circle at 82% 12%, rgba(var(--fire-rgb), 0.16), transparent 22%),
+    radial-gradient(circle at 56% 74%, rgba(var(--accent-rgb), 0.05), transparent 28%),
+    linear-gradient(180deg, #010101 0%, #050302 38%, #020101 100%);
   min-height: 100vh;
   line-height: 1.5;
   overflow-x: hidden;
@@ -61,7 +61,7 @@ body::after {
 
 body::before {
   z-index: -2;
-  opacity: 0.22;
+  opacity: 0.16;
   background:
     radial-gradient(circle at 70% 18%, rgba(var(--accent-rgb), 0.16), transparent 22%),
     radial-gradient(circle at 12% 82%, rgba(var(--fire-rgb), 0.15), transparent 18%);
@@ -202,8 +202,8 @@ img {
   border: 1px solid rgba(var(--accent-rgb), 0.62);
   color: var(--text);
   background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.01)),
-    linear-gradient(135deg, rgba(var(--accent-rgb), 0.34), rgba(var(--fire-rgb), 0.2) 62%, rgba(0, 0, 0, 0.08));
+    linear-gradient(180deg, rgba(255, 244, 220, 0.16), rgba(255, 255, 255, 0.02) 26%, rgba(0, 0, 0, 0.02) 27%, rgba(0, 0, 0, 0.08) 100%),
+    linear-gradient(135deg, rgba(var(--accent-rgb), 0.38), rgba(var(--accent-rgb), 0.18) 38%, rgba(var(--fire-rgb), 0.18) 68%, rgba(0, 0, 0, 0.08));
   text-decoration: none;
   text-transform: uppercase;
   font-family: var(--font-heading);
@@ -219,7 +219,7 @@ img {
   content: "";
   position: absolute;
   inset: -50% -10%;
-  background: linear-gradient(115deg, transparent 32%, rgba(255, 255, 255, 0.34) 50%, transparent 68%);
+  background: linear-gradient(115deg, transparent 32%, rgba(255, 245, 224, 0.46) 50%, transparent 68%);
   transform: translateX(-130%) skewX(-18deg);
   transition: transform 0.7s ease;
 }
@@ -255,7 +255,7 @@ img {
 }
 
 .button--ghost {
-  background: linear-gradient(180deg, rgba(var(--accent-rgb), 0.07), rgba(255, 255, 255, 0.02));
+  background: linear-gradient(180deg, rgba(var(--accent-rgb), 0.09), rgba(255, 255, 255, 0.02));
   border-color: rgba(var(--accent-rgb), 0.26);
   box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.04);
 }
@@ -336,9 +336,9 @@ img {
 .hero::before {
   inset: 0;
   background:
-    radial-gradient(circle at 74% 36%, rgba(var(--accent-rgb), 0.3), transparent 24%),
-    radial-gradient(circle at 82% 34%, rgba(var(--fire-rgb), 0.16), transparent 18%),
-    linear-gradient(90deg, rgba(4, 3, 2, 0.62) 0%, rgba(4, 3, 2, 0.18) 46%, rgba(4, 3, 2, 0.46) 100%);
+    radial-gradient(circle at 76% 32%, rgba(var(--accent-rgb), 0.3), transparent 22%),
+    radial-gradient(circle at 84% 34%, rgba(var(--fire-rgb), 0.18), transparent 18%),
+    linear-gradient(90deg, rgba(2, 1, 1, 0.78) 0%, rgba(2, 1, 1, 0.32) 42%, rgba(2, 1, 1, 0.56) 100%);
   z-index: 1;
 }
 
@@ -346,9 +346,9 @@ img {
   inset: auto -10% -12% -10%;
   height: 36%;
   background:
-    radial-gradient(circle at 76% 0%, rgba(var(--accent-rgb), 0.34), transparent 22%),
-    radial-gradient(circle at 80% 8%, rgba(var(--fire-rgb), 0.2), transparent 24%),
-    linear-gradient(180deg, rgba(4, 3, 2, 0) 0%, rgba(4, 3, 2, 0.86) 78%, var(--bg) 100%);
+    radial-gradient(circle at 76% 0%, rgba(var(--accent-rgb), 0.3), transparent 22%),
+    radial-gradient(circle at 82% 8%, rgba(var(--fire-rgb), 0.18), transparent 24%),
+    linear-gradient(180deg, rgba(2, 1, 1, 0) 0%, rgba(2, 1, 1, 0.92) 78%, var(--bg) 100%);
   z-index: 1;
 }
 
@@ -358,14 +358,14 @@ img {
   z-index: 0;
   overflow: hidden;
   background:
-    radial-gradient(circle at 74% 18%, rgba(var(--accent-rgb), 0.42), transparent 7%),
-    radial-gradient(circle at 72% 22%, rgba(var(--fire-rgb), 0.28), transparent 15%),
-    radial-gradient(circle at 80% 52%, rgba(var(--accent-rgb), 0.16), transparent 18%),
-    radial-gradient(circle at 66% 76%, rgba(var(--fire-rgb), 0.12), transparent 16%),
-    linear-gradient(120deg, rgba(var(--accent-rgb), 0.1) 0%, transparent 18%),
+    radial-gradient(circle at 74% 18%, rgba(var(--accent-rgb), 0.5), transparent 7%),
+    radial-gradient(circle at 72% 22%, rgba(var(--fire-rgb), 0.34), transparent 15%),
+    radial-gradient(circle at 80% 52%, rgba(var(--accent-rgb), 0.18), transparent 18%),
+    radial-gradient(circle at 66% 76%, rgba(var(--fire-rgb), 0.14), transparent 16%),
+    linear-gradient(120deg, rgba(var(--accent-rgb), 0.12) 0%, transparent 18%),
     repeating-linear-gradient(112deg, rgba(255, 241, 217, 0.04) 0 2px, transparent 2px 20px),
-    linear-gradient(180deg, rgba(4, 3, 2, 0.08), rgba(4, 3, 2, 0.72)),
-    linear-gradient(135deg, #090705 10%, #140c07 44%, var(--bg) 100%);
+    linear-gradient(180deg, rgba(2, 1, 1, 0.12), rgba(2, 1, 1, 0.78)),
+    linear-gradient(135deg, #050403 8%, #110904 44%, var(--bg) 100%);
   transform: scale(1.02);
   will-change: transform;
 }
@@ -389,24 +389,22 @@ img {
   inset: 0;
   z-index: 2;
   background:
-    radial-gradient(circle at 72% 24%, rgba(var(--accent-rgb), 0.18), transparent 18%),
-    radial-gradient(circle at 64% 56%, rgba(var(--fire-rgb), 0.1), transparent 20%);
+    radial-gradient(circle at 76% 24%, rgba(var(--accent-rgb), 0.2), transparent 18%),
+    radial-gradient(circle at 68% 56%, rgba(var(--fire-rgb), 0.12), transparent 20%);
 }
 
 .hero__athlete::after {
-  right: 10%;
+  right: 4%;
   bottom: 10%;
   z-index: 0;
-  width: 18rem;
-  height: 8rem;
-  background: radial-gradient(ellipse at center, rgba(var(--accent-rgb), 0.28), rgba(var(--fire-rgb), 0.1) 42%, transparent 74%);
-  filter: blur(16px);
+  width: 24rem;
+  height: 10rem;
+  background: radial-gradient(ellipse at center, rgba(var(--accent-rgb), 0.32), rgba(var(--fire-rgb), 0.12) 42%, transparent 74%);
+  filter: blur(18px);
 }
 
-.hero__athlete img {
+.hero__figure {
   position: absolute;
-  right: 7rem;
-  bottom: -1.2rem;
   z-index: 1;
   width: auto;
   max-width: none;
@@ -418,7 +416,17 @@ img {
     drop-shadow(0 0 22px rgba(var(--accent-rgb), 0.16))
     drop-shadow(0 0 48px rgba(var(--fire-rgb), 0.16));
   transform: translateZ(0);
-  opacity: 0.98;
+}
+
+.hero__figure--primary {
+  right: 7rem;
+  bottom: -1.2rem;
+  height: 114%;
+  opacity: 0.96;
+}
+
+.hero__figure--secondary {
+  display: none;
 }
 
 .hero__media::before,
@@ -470,11 +478,11 @@ img {
 .hero__visual::after {
   content: "";
   position: absolute;
-  right: -2%;
-  bottom: 8%;
-  width: min(24rem, 64%);
-  height: 9rem;
-  background: radial-gradient(ellipse at center, rgba(var(--accent-rgb), 0.28), rgba(var(--fire-rgb), 0.08) 42%, transparent 74%);
+  right: -3%;
+  bottom: 7%;
+  width: min(27rem, 70%);
+  height: 10rem;
+  background: radial-gradient(ellipse at center, rgba(var(--accent-rgb), 0.3), rgba(var(--fire-rgb), 0.08) 42%, transparent 74%);
   filter: blur(18px);
   pointer-events: none;
   z-index: 0;
@@ -489,6 +497,12 @@ img {
   letter-spacing: 0.05em;
   text-transform: uppercase;
   text-shadow: 0 0 44px rgba(0, 0, 0, 0.34);
+}
+
+.hero h1,
+.hero__lead {
+  position: relative;
+  z-index: 1;
 }
 
 .hero__title-accent {
@@ -2301,7 +2315,7 @@ img {
     min-height: 34rem;
   }
 
-  .hero__athlete img {
+  .hero__figure--primary {
     right: 2.5rem;
     height: 100%;
   }
@@ -2386,7 +2400,7 @@ img {
     height: 7rem;
   }
 
-  .hero__athlete img {
+  .hero__figure--primary {
     right: 1rem;
     bottom: 0;
     height: 100%;
@@ -2513,7 +2527,7 @@ img {
     position: relative;
     z-index: 3;
     max-width: none;
-    padding-right: min(30vw, 6.8rem);
+    padding-right: min(36vw, 8rem);
   }
 
   .hero h1 {
@@ -2537,11 +2551,11 @@ img {
 
   .hero__visual {
     position: absolute;
-    right: -0.3rem;
+    right: -0.55rem;
     bottom: 0;
     z-index: 2;
-    width: min(48vw, 11.8rem);
-    min-height: 17rem;
+    width: min(48vw, 12rem);
+    min-height: 17.4rem;
     margin-top: 0;
     pointer-events: none;
   }
@@ -2561,12 +2575,17 @@ img {
     height: 4rem;
   }
 
-  .hero__athlete img {
+  .hero__figure {
+    width: auto;
+    max-width: none;
+    height: auto;
+  }
+
+  .hero__figure--primary {
     right: 0;
     bottom: 0;
     width: 100%;
-    height: auto;
-    opacity: 0.72;
+    opacity: 0.74;
   }
 
   .service-hero__ghost {
@@ -2791,7 +2810,7 @@ img {
 
 @media (max-width: 420px) {
   .hero__content {
-    padding-right: min(28vw, 5.8rem);
+    padding-right: min(34vw, 6.6rem);
   }
 
   .hero h1 {
@@ -2837,8 +2856,12 @@ img {
   }
 
   .hero__visual {
-    width: min(44vw, 10.5rem);
-    min-height: 15.5rem;
+    width: min(52vw, 12rem);
+    min-height: 16.8rem;
+  }
+
+  .hero__figure--primary {
+    width: 100%;
   }
 }
 
