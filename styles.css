@@ -419,14 +419,33 @@ img {
 }
 
 .hero__figure--primary {
-  right: 7rem;
-  bottom: -1.2rem;
-  height: 114%;
-  opacity: 0.96;
+  left: 0.4rem;
+  right: auto;
+  bottom: 3.4rem;
+  height: 74%;
+  opacity: 0.62;
+  z-index: 0;
+  filter:
+    saturate(0.82)
+    contrast(1.12)
+    brightness(0.86)
+    drop-shadow(0 0 16px rgba(var(--accent-rgb), 0.08))
+    drop-shadow(0 0 34px rgba(var(--fire-rgb), 0.12));
 }
 
-.hero__figure--secondary {
-  display: none;
+.hero__figure--woman {
+  right: -0.15rem;
+  bottom: -0.55rem;
+  z-index: 1;
+  width: min(27rem, 82%);
+  height: auto;
+  opacity: 0.94;
+  filter:
+    saturate(0.92)
+    contrast(1.08)
+    brightness(0.96)
+    drop-shadow(0 0 24px rgba(var(--accent-rgb), 0.16))
+    drop-shadow(0 0 58px rgba(var(--fire-rgb), 0.16));
 }
 
 .hero__media::before,
@@ -2316,8 +2335,17 @@ img {
   }
 
   .hero__figure--primary {
-    right: 2.5rem;
-    height: 100%;
+    left: 0.2rem;
+    bottom: 3rem;
+    height: 66%;
+    opacity: 0.52;
+  }
+
+  .hero__figure--woman {
+    right: -0.1rem;
+    bottom: 0;
+    width: min(23rem, 82%);
+    opacity: 0.92;
   }
 
   .service-card,
@@ -2401,10 +2429,18 @@ img {
   }
 
   .hero__figure--primary {
-    right: 1rem;
+    left: -0.4rem;
+    right: auto;
+    bottom: 2.8rem;
+    height: 58%;
+    opacity: 0.38;
+  }
+
+  .hero__figure--woman {
+    right: 0.1rem;
     bottom: 0;
-    height: 100%;
-    opacity: 0.9;
+    width: min(18rem, 78%);
+    opacity: 0.88;
   }
 
   .hero h1 {
@@ -2582,10 +2618,19 @@ img {
   }
 
   .hero__figure--primary {
-    right: 0;
-    bottom: 0;
-    width: 100%;
-    opacity: 0.74;
+    left: -1.8rem;
+    right: auto;
+    bottom: 2.3rem;
+    width: auto;
+    height: 60%;
+    opacity: 0.3;
+  }
+
+  .hero__figure--woman {
+    right: -0.45rem;
+    bottom: 0.2rem;
+    width: 110%;
+    opacity: 0.82;
   }
 
   .service-hero__ghost {
@@ -2861,7 +2906,14 @@ img {
   }
 
   .hero__figure--primary {
-    width: 100%;
+    left: -1.4rem;
+    width: auto;
+    height: 56%;
+  }
+
+  .hero__figure--woman {
+    right: -0.2rem;
+    width: 112%;
   }
 }
 
