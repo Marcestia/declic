@@ -10,6 +10,9 @@
   --accent-rgb: 224, 177, 105;
   --accent-strong: #fff0cd;
   --accent-soft: rgba(224, 177, 105, 0.16);
+  --skin-highlight: #e2a36a;
+  --skin-tone: #b96a33;
+  --skin-deep: #8b3d16;
   --fire: #ff7a1a;
   --fire-rgb: 255, 122, 26;
   --fire-strong: #ff4d00;
@@ -374,7 +377,7 @@ img {
   position: absolute;
   inset: 0;
   z-index: 1;
-  overflow: hidden;
+  overflow: visible;
   pointer-events: none;
 }
 
@@ -386,21 +389,28 @@ img {
 }
 
 .hero__athlete::before {
-  inset: 0;
-  z-index: 2;
+  top: 1.5rem;
+  right: -10%;
+  z-index: 0;
+  width: 42rem;
+  height: 42rem;
   background:
-    radial-gradient(circle at 76% 24%, rgba(var(--accent-rgb), 0.2), transparent 18%),
-    radial-gradient(circle at 68% 56%, rgba(var(--fire-rgb), 0.12), transparent 20%);
+    radial-gradient(circle at 30% 46%, rgba(var(--accent-rgb), 0.2), transparent 32%),
+    radial-gradient(circle at 72% 34%, rgba(var(--fire-rgb), 0.26), transparent 28%),
+    radial-gradient(circle at 72% 78%, rgba(var(--accent-rgb), 0.16), transparent 22%);
+  filter: blur(20px);
+  opacity: 0.92;
 }
 
 .hero__athlete::after {
-  right: 4%;
-  bottom: 10%;
+  right: -3%;
+  bottom: 6%;
   z-index: 0;
-  width: 24rem;
-  height: 10rem;
-  background: radial-gradient(ellipse at center, rgba(var(--accent-rgb), 0.32), rgba(var(--fire-rgb), 0.12) 42%, transparent 74%);
-  filter: blur(18px);
+  width: 29rem;
+  height: 11rem;
+  background:
+    radial-gradient(ellipse at center, rgba(var(--fire-rgb), 0.2), rgba(var(--accent-rgb), 0.12) 42%, transparent 74%);
+  filter: blur(22px);
 }
 
 .hero__figure {
@@ -422,19 +432,20 @@ img {
   display: none;
 }
 
-.hero__figure--woman {
-  right: -0.65rem;
-  bottom: -0.4rem;
-  z-index: 1;
-  width: min(32rem, 94%);
+.hero__figure--hero {
+  right: -8.6rem;
+  bottom: -0.9rem;
+  z-index: 0;
+  width: min(44.8rem, 114%);
   height: auto;
-  opacity: 0.98;
+  opacity: 0.75;
   filter:
-    saturate(1)
+    saturate(1.02)
     contrast(1.08)
-    brightness(1)
-    drop-shadow(0 0 24px rgba(var(--accent-rgb), 0.16))
-    drop-shadow(0 0 58px rgba(var(--fire-rgb), 0.16));
+    brightness(0.9)
+    sepia(0.08)
+    drop-shadow(0 0 20px rgba(var(--accent-rgb), 0.12))
+    drop-shadow(0 0 52px rgba(var(--fire-rgb), 0.16));
 }
 
 .hero__media::before,
@@ -472,6 +483,7 @@ img {
 
 .hero__content {
   max-width: 42rem;
+  margin-left: -1.8rem;
 }
 
 .hero__visual {
@@ -479,19 +491,21 @@ img {
   display: flex;
   align-items: flex-end;
   justify-self: end;
-  width: min(100%, 40rem);
-  min-height: clamp(32rem, 76svh, 46rem);
+  width: min(100%, 44rem);
+  min-height: clamp(34rem, 78svh, 48rem);
+  overflow: visible;
 }
 
 .hero__visual::after {
   content: "";
   position: absolute;
-  right: -3%;
-  bottom: 7%;
-  width: min(27rem, 70%);
-  height: 10rem;
-  background: radial-gradient(ellipse at center, rgba(var(--accent-rgb), 0.3), rgba(var(--fire-rgb), 0.08) 42%, transparent 74%);
-  filter: blur(18px);
+  right: -10%;
+  bottom: 5%;
+  width: min(34rem, 82%);
+  height: 12rem;
+  background:
+    radial-gradient(ellipse at center, rgba(var(--accent-rgb), 0.22), rgba(var(--fire-rgb), 0.14) 42%, transparent 74%);
+  filter: blur(22px);
   pointer-events: none;
   z-index: 0;
 }
@@ -515,12 +529,12 @@ img {
 
 .hero__title-accent {
   color: transparent;
-  background: linear-gradient(180deg, var(--accent-strong) 0%, color-mix(in srgb, var(--accent) 70%, white) 42%, var(--fire) 100%);
+  background: linear-gradient(180deg, var(--skin-highlight) 0%, var(--skin-tone) 46%, var(--skin-deep) 100%);
   -webkit-background-clip: text;
   background-clip: text;
   text-shadow:
-    0 0 18px rgba(var(--accent-rgb), 0.16),
-    0 0 34px rgba(var(--fire-rgb), 0.12);
+    0 0 16px rgba(185, 106, 51, 0.18),
+    0 0 30px rgba(139, 61, 22, 0.14);
 }
 
 .hero__lead {
@@ -2319,19 +2333,23 @@ img {
   }
 
   .hero__visual {
-    width: min(100%, 32rem);
-    min-height: 34rem;
+    width: min(100%, 35rem);
+    min-height: 36rem;
+  }
+
+  .hero__content {
+    margin-left: 0;
   }
 
   .hero__figure--primary {
     display: none;
   }
 
-  .hero__figure--woman {
-    right: -0.2rem;
-    bottom: 0;
-    width: min(29rem, 92%);
-    opacity: 0.96;
+  .hero__figure--hero {
+    right: -5rem;
+    bottom: -0.35rem;
+    width: min(37.5rem, 112%);
+    opacity: 0.77;
   }
 
   .service-card,
@@ -2401,28 +2419,29 @@ img {
   }
 
   .hero__athlete::before {
-    background:
-      linear-gradient(90deg, rgba(4, 3, 2, 0.96) 0%, rgba(4, 3, 2, 0.78) 34%, rgba(4, 3, 2, 0.28) 56%, rgba(4, 3, 2, 0.76) 100%),
-      linear-gradient(180deg, rgba(4, 3, 2, 0.18) 0%, rgba(4, 3, 2, 0.08) 30%, rgba(4, 3, 2, 0.86) 100%),
-      radial-gradient(circle at 72% 18%, rgba(var(--accent-rgb), 0.14), transparent 14%);
+    right: -14%;
+    top: 6%;
+    width: 28rem;
+    height: 28rem;
+    opacity: 0.82;
   }
 
   .hero__athlete::after {
-    right: 4%;
-    bottom: 10%;
-    width: 12rem;
-    height: 7rem;
+    right: -3%;
+    bottom: 8%;
+    width: 14rem;
+    height: 6rem;
   }
 
   .hero__figure--primary {
     display: none;
   }
 
-  .hero__figure--woman {
-    right: -0.15rem;
-    bottom: 0;
-    width: min(23rem, 88%);
-    opacity: 0.94;
+  .hero__figure--hero {
+    right: -4.4rem;
+    bottom: -0.2rem;
+    width: min(29.8rem, 110%);
+    opacity: 0.74;
   }
 
   .hero h1 {
@@ -2430,8 +2449,8 @@ img {
   }
 
   .hero__visual {
-    width: min(100%, 28rem);
-    min-height: 28rem;
+    width: min(100%, 31rem);
+    min-height: 29rem;
     margin-top: 1rem;
   }
 
@@ -2569,27 +2588,27 @@ img {
 
   .hero__visual {
     position: absolute;
-    right: -0.55rem;
+    right: -1.4rem;
     bottom: 0;
     z-index: 2;
-    width: min(48vw, 12rem);
-    min-height: 17.4rem;
+    width: min(58vw, 14rem);
+    min-height: 18.4rem;
     margin-top: 0;
     pointer-events: none;
   }
 
   .hero__athlete::before {
-    inset: 0;
-    background:
-      linear-gradient(90deg, rgba(4, 3, 2, 0.02) 0%, rgba(4, 3, 2, 0.06) 100%),
-      radial-gradient(circle at 72% 24%, rgba(var(--accent-rgb), 0.14), transparent 22%),
-      radial-gradient(circle at 64% 56%, rgba(var(--fire-rgb), 0.08), transparent 24%);
+    right: -24%;
+    top: 10%;
+    width: 15rem;
+    height: 15rem;
+    opacity: 0.7;
   }
 
   .hero__athlete::after {
-    right: 0;
-    bottom: 12%;
-    width: 8rem;
+    right: -8%;
+    bottom: 10%;
+    width: 9rem;
     height: 4rem;
   }
 
@@ -2603,11 +2622,11 @@ img {
     display: none;
   }
 
-  .hero__figure--woman {
-    right: -0.05rem;
-    bottom: 0.15rem;
-    width: 114%;
-    opacity: 0.9;
+  .hero__figure--hero {
+    right: -3.2rem;
+    bottom: 0.1rem;
+    width: 126%;
+    opacity: 0.64;
   }
 
   .service-hero__ghost {
@@ -2878,17 +2897,18 @@ img {
   }
 
   .hero__visual {
-    width: min(52vw, 12rem);
-    min-height: 16.8rem;
+    right: -1.7rem;
+    width: min(56vw, 13rem);
+    min-height: 17.2rem;
   }
 
   .hero__figure--primary {
     display: none;
   }
 
-  .hero__figure--woman {
-    right: 0;
-    width: 116%;
+  .hero__figure--hero {
+    right: -3rem;
+    width: 132%;
   }
 }
 
