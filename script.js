@@ -7,6 +7,7 @@ const serviceCards = document.querySelectorAll(".service-card");
 const canvas = document.getElementById("embers-canvas");
 const contactForm = document.getElementById("contact-form");
 const contactFormStatus = document.getElementById("contact-form-status");
+const promoBandRail = document.querySelector(".promo-band__rail");
 
 if (prefersReducedMotion) {
   reveals.forEach((element) => element.classList.add("is-visible"));
@@ -51,6 +52,63 @@ if (heroMedia && !prefersReducedMotion) {
     },
     { passive: true }
   );
+}
+
+if (promoBandRail) {
+  const promoTracks = promoBandRail.querySelectorAll(".promo-band__track");
+
+  if (promoTracks.length >= 2) {
+    let promoFrameId = 0;
+    let promoTrackWidth = 0;
+    let promoOffset = 0;
+
+    const getPromoSpeed = () => {
+      if (window.innerWidth <= 640) {
+        return 0.7;
+      }
+
+      if (window.innerWidth <= 1080) {
+        return 0.9;
+      }
+
+      return 1.15;
+    };
+
+    const measurePromoBand = () => {
+      promoTrackWidth = promoTracks[0].getBoundingClientRect().width;
+      if (!promoTrackWidth) {
+        return;
+      }
+
+      promoOffset = -promoTrackWidth;
+      promoBandRail.style.transform = `translate3d(${promoOffset}px, 0, 0)`;
+    };
+
+    const animatePromoBand = () => {
+      promoOffset += getPromoSpeed();
+
+      if (!promoTrackWidth) {
+        promoFrameId = window.requestAnimationFrame(animatePromoBand);
+        return;
+      }
+
+      if (promoOffset >= 0) {
+        promoOffset = -promoTrackWidth;
+      }
+
+      promoBandRail.style.transform = `translate3d(${promoOffset}px, 0, 0)`;
+      promoFrameId = window.requestAnimationFrame(animatePromoBand);
+    };
+
+    promoBandRail.style.animation = "none";
+    measurePromoBand();
+    animatePromoBand();
+
+    window.addEventListener("resize", measurePromoBand);
+    window.addEventListener("load", measurePromoBand);
+    document.fonts?.ready.then(measurePromoBand).catch(() => {});
+    window.addEventListener("beforeunload", () => window.cancelAnimationFrame(promoFrameId));
+  }
 }
 
 if (!prefersReducedMotion) {
