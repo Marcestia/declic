@@ -3,6 +3,8 @@ require("dotenv").config();
 const { sendContactEmails } = require("../lib/contact-mail");
 
 module.exports = async (req, res) => {
+  res.setHeader("X-Robots-Tag", "noindex, nofollow");
+
   if (req.method !== "POST") {
     res.setHeader("Allow", "POST");
     return res.status(405).json({

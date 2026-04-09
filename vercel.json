@@ -28,12 +28,27 @@
     {
       "src": "*.jpeg",
       "use": "@vercel/static"
+    },
+    {
+      "src": "*.txt",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "*.xml",
+      "use": "@vercel/static"
     }
   ],
   "routes": [
     {
       "src": "/api/contact",
       "dest": "/api/contact.js"
+    },
+    {
+      "src": "/index\\.html",
+      "status": 308,
+      "headers": {
+        "Location": "/"
+      }
     },
     {
       "handle": "filesystem"

@@ -487,6 +487,12 @@ img {
   margin-left: -1.8rem;
 }
 
+.hero .section-tag,
+.hero__impactline,
+.hero__actions {
+  display: none;
+}
+
 .hero__visual {
   position: relative;
   display: flex;
@@ -540,7 +546,7 @@ img {
 
 .hero__lead {
   max-width: 31rem;
-  margin: 0.85rem 0 0;
+  margin: 1.1rem 0 0;
   font-family: var(--font-heading);
   font-size: clamp(1.05rem, 2vw, 1.35rem);
   line-height: 1.3;
