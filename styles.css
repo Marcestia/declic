@@ -1514,6 +1514,69 @@ img {
   color: #e2d7cb;
 }
 
+.local-seo,
+.faq-section {
+  position: relative;
+}
+
+.local-seo__grid,
+.faq-section__grid {
+  margin-top: 2rem;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.15rem;
+}
+
+.faq-section__grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.local-seo__card,
+.faq-item {
+  position: relative;
+  padding: 1.55rem 1.4rem 1.45rem;
+  border: 1px solid rgba(var(--accent-rgb), 0.18);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0.008)),
+    linear-gradient(145deg, rgba(19, 13, 9, 0.9), rgba(6, 6, 6, 0.98));
+  clip-path: polygon(0 0, calc(100% - 14px) 0, 100% 14px, 100% 100%, 14px 100%, 0 calc(100% - 14px));
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.03), 0 0 36px rgba(var(--accent-rgb), 0.08);
+}
+
+.local-seo__card h3,
+.faq-item h3 {
+  margin: 0 0 0.65rem;
+  font-family: var(--font-heading);
+  font-size: 1.3rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: color-mix(in srgb, var(--accent) 80%, white);
+}
+
+.local-seo__card p,
+.faq-item p {
+  margin: 0;
+  color: #e5dbcf;
+}
+
+.local-seo__towns {
+  margin-top: 1.2rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+}
+
+.local-seo__towns span {
+  padding: 0.62rem 0.95rem;
+  border: 1px solid rgba(var(--accent-rgb), 0.18);
+  background: linear-gradient(180deg, rgba(255, 244, 224, 0.04), rgba(255, 255, 255, 0.02));
+  font-family: var(--font-heading);
+  font-size: 0.9rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: #ebd3aa;
+}
+
 .cta-final {
   padding-top: calc(var(--section-space) - 1rem);
 }
@@ -2532,6 +2595,8 @@ img {
   .contact-section__grid,
   .site-footer__grid,
   .services__grid,
+  .local-seo__grid,
+  .faq-section__grid,
   .why__grid,
   .service-hero__inner,
   .service-suite__grid,
@@ -2666,6 +2731,8 @@ img {
 
   .lineup__grid,
   .impact-strip__grid,
+  .local-seo__grid,
+  .faq-section__grid,
   .dual-state__grid,
   .service-hero__highlights,
   .benefits-grid,
